@@ -1,8 +1,8 @@
 import './App.css';
-
+import Temp from "./components/Temp.js";
 function App() {
   return (
-    <div></div>
+    <Temp/>
   );
 }
 
