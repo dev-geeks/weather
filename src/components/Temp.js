@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Temp.css";
 
 const Temp = () =>{
+
+    const [search, setSearch] = useState("mohali");
+
+    const getWeatherInfo = () =>{
+
+    }
+
+    useEffect(()=>{
+        getWeatherInfo();
+    })
     return(
         <div>
             <div className="wrap">
                 <div className="search">
-                    <input type="search" placeholder="Search..." autoFocus id="search" className="searchTerm"/>
-                    <button className="searchButton">Search</button>
+                    <input type="search" placeholder="Search..." autoFocus id="search" className="searchTerm" value={search} onChange={(e)=>{setSearch(e.target.value)}}/>
+                    <button className="searchButton" onClick={getWeatherInfo}>Search</button>
                 </div>
             </div>
             <article className="widget">
